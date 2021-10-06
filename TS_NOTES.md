@@ -114,7 +114,8 @@ An array like structure with elements in fixed order
 
 Creates a new type, describe the properties and value types of an object.
 An obj can be of an interface type if it satisfies the interface structure and it does not matter if it has more properties.
-We can use a single interface to classify very different objects and then use it in some generic function as arguments.
+
+> We can use a single interface to classify very different objects and then use it in some generic function as arguments.
 Thus making the function and interfaces reusable. 
 
 ## Classes
@@ -124,3 +125,10 @@ Blueprint to create an object with some fields(values) and methods(functions) to
 
 Interface is used to check an already created object or while creating an object
 Class is used to make an object with the same values and methods inside the class
+
+> Typescript does not understand when there is a global object in our project
+> So we use @type files for the same (always remember to add tsconfig.json file with tsc --init command)
+
+__NOTE__: In case of elements with two types(one null) if you are sure it is not null you can use '!' operator inthe end ex: const div = document.getElementById('map')! => div:HTMLElement
+
+> Classes have dual nature, they can be used to create a new instance of an object or state the type of an object
